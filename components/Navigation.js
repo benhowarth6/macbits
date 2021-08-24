@@ -1,6 +1,7 @@
 import { Fragment, useState } from 'react'
 import { Dialog, Popover, Tab, Transition } from '@headlessui/react'
 import { MenuIcon, SearchIcon, ShoppingBagIcon, XIcon } from '@heroicons/react/outline'
+import Link from 'next/link'
 
 const navigation = {
   categories: [
@@ -316,7 +317,8 @@ export default function Navigation() {
 
               {/* Logo */}
               <div className="ml-4 flex lg:ml-0">
-                <a href="#">
+                <Link href="/">
+                <a>
                   <span className="sr-only">Workflow</span>
                   <img
                     className="h-8 w-auto"
@@ -324,6 +326,7 @@ export default function Navigation() {
                     alt=""
                   />
                 </a>
+                </Link>
               </div>
 
               {/* Flyout menus */}
@@ -430,7 +433,8 @@ export default function Navigation() {
 
                 {/* Cart */}
                 <div className="ml-4 flow-root lg:ml-6">
-                  <a onClick={() => setOpen(false)} className="group -m-2 p-2 flex items-center">
+                  <Link href="/cart">
+                  <a className="group -m-2 p-2 flex items-center">
                     <ShoppingBagIcon
                       className="flex-shrink-0 h-6 w-6 text-gray-400 group-hover:text-gray-500"
                       aria-hidden="true"
@@ -438,6 +442,7 @@ export default function Navigation() {
                     <span className="ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800">0</span>
                     <span className="sr-only">items in cart, view bag</span>
                   </a>
+                  </Link>
                 </div>
               </div>
             </div>
