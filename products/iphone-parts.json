@@ -1,0 +1,42 @@
+[
+    {
+        "title": "iPhone 11 Pro Max SVC Display",
+        "model": "11-pro-max",
+        "description": "Genuine Apple Service Pack OLED display assembly for the iPhone 11 Pro Max",
+        "type": "display",
+        "price": "289",
+        "image-1": "img/iphone-parts/11-pro-max/svc-display-1.png",
+        "image-2": "img/iphone-parts/11-pro-max/svc-display-2.png",
+        "partnumber": "661-14099"
+    },
+    {
+        "title": "iPhone 11 Pro Max SVC Battery",
+        "model": "11-pro-max",
+        "description": "Genuine Apple Service Pack battery for the iPhone 11 Pro Max",
+        "type": "battery",
+        "price": "59",
+        "image-1": "img/iphone-parts/11-pro-max/svc-battery-1.png",
+        "image-2": "img/iphone-parts/11-pro-max/svc-battery-2.png",
+        "partnumber": "661-13624"
+    },
+    {
+        "title": "iPhone 11 Pro Max SVC Rear Camera",
+        "model": "11-pro-max",
+        "description": "Genuine Apple Service Pack triple rear camera assembly for the iPhone 11 Pro Max",
+        "type": "camera",
+        "price": "69",
+        "image-1": "img/iphone-parts/11-pro-max/svc-camera-1.png",
+        "image-2": "img/iphone-parts/11-pro-max/svc-camera-2.png",
+        "partnumber": "661-13572"
+    },
+    {
+        "title": "iPhone 11 Pro Max SVC Rear Charging Port",
+        "model": "11-pro-max",
+        "description": "Genuine Apple Service Pack charging port assembly for the iPhone 11 Pro Max",
+        "type": "charging-port",
+        "price": "49",
+        "image-1": "img/iphone-parts/11-pro-max/svc-charging-port-1.png",
+        "image-2": "img/iphone-parts/11-pro-max/svc-charging-port-2.png",
+        "partnumber": "661-14099"
+    }
+]
