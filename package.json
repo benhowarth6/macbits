@@ -8,6 +8,7 @@
   "dependencies": {
     "@headlessui/react": "^1.4.0",
     "@heroicons/react": "^1.0.4",
+    "@stripe/stripe-js": "^1.17.1",
     "@tailwindcss/aspect-ratio": "^0.2.1",
     "next": "latest",
     "react": "^17.0.2",
