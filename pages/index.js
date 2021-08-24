@@ -1,11 +1,8 @@
 import Head from 'next/head';
-import { useState } from 'react';
 import Link from 'next/link';
 
-import Navigation from "../components/Navigation";
 import Promo from "../components/Promo";
 import Categories from "../components/Categories";
-import Footer from "../components/Footer";
 
 import { useCart } from '../hooks/use-cart.js';
 
