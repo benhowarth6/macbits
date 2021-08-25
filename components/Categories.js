@@ -1,10 +1,12 @@
+import Link from 'next/link';
+
 const callouts = [
     {
       name: 'iPhone Parts',
       description: 'Genuine SVC and reclaimed parts',
       imageSrc: 'https://images.unsplash.com/photo-1605170439002-90845e8c0137?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=3561&q=80',
       imageAlt: 'Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug.',
-      href: '#',
+      href: '/iphone-parts',
     },
     {
       name: 'MacBook Parts',
@@ -40,10 +42,12 @@ const callouts = [
                     />
                   </div>
                   <h3 className="mt-6 text-sm text-gray-500">
+                    <Link href={callout.href}>
                     <a href={callout.href}>
                       <span className="absolute inset-0" />
                       {callout.name}
                     </a>
+                    </Link>
                   </h3>
                   <p className="text-base font-semibold text-gray-900">{callout.description}</p>
                 </div>

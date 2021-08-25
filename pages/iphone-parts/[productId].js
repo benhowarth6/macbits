@@ -72,7 +72,7 @@ export default function Product({ product }) {
                                 <h3 className="sr-only">Part Number</h3>
                                 <div className="flex items-center">
                                     <div className="flex items-center">
-                                        <p class="text-gray-500">{partnumber}</p>
+                                        <p className="text-gray-500">{partnumber}</p>
                                     </div>
                                 </div>
                             </div>

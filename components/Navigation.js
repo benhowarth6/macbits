@@ -3,6 +3,8 @@ import { Dialog, Popover, Tab, Transition } from '@headlessui/react'
 import { MenuIcon, SearchIcon, ShoppingBagIcon, XIcon } from '@heroicons/react/outline'
 import Link from 'next/link'
 
+import models from "../models/iphone-models.json";
+
 import { useCart } from '../hooks/use-cart.js';
 
 const navigation = {
@@ -37,7 +39,7 @@ const navigation = {
             { name: 'iPhone 11 Pro', href: '#' },
             { name: 'iPhone 11', href: '#' },
             { name: 'iPhone XS Max', href: '#' },
-            { name: 'Browse All', href: '#' },
+            { name: 'Browse All', href: '../iphone-parts' },
           ],
         },
         {

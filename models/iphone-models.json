@@ -2,64 +2,73 @@
     {
         "id": "1",
         "title": "iPhone 12 Pro Max",
-        "model": "12-pro-max",
+        "type": "12-pro-max",
         "description": "Parts for the iPhone 12 Pro Max",
-        "image1": "/img/iphone-parts/11-pro-max/svc-display-1.jpg",
+        "image1": "/img/iphone-models/12-pro-max.jpg",
         "image2": "/img/iphone-parts/11-pro-max/svc-display-2.jpg",
         "alt": "iPhone 12 Pro Max"
     },
     {
         "id": "2",
         "title": "iPhone 12 Pro",
-        "model": "12-pro",
+        "type": "12-pro",
         "description": "Parts for the iPhone 12 Pro",
-        "image1": "/img/iphone-parts/11-pro-max/svc-display-1.jpg",
+        "image1": "/img/iphone-models/12-pro.jpg",
         "image2": "/img/iphone-parts/11-pro-max/svc-display-2.jpg",
         "alt": "iPhone 12 Pro"
     },
     {
         "id": "3",
         "title": "iPhone 12",
-        "model": "12",
+        "type": "12",
         "description": "Parts for the iPhone 12",
-        "image1": "/img/iphone-parts/11-pro-max/svc-display-1.jpg",
+        "image1": "/img/iphone-models/12.jpg",
         "image2": "/img/iphone-parts/11-pro-max/svc-display-2.jpg",
         "alt": "iPhone 12"
     },
     {
         "id": "4",
         "title": "iPhone 12 Mini",
-        "model": "12-mini",
+        "type": "12-mini",
         "description": "Parts for the iPhone 12 Mini",
-        "image1": "/img/iphone-parts/11-pro-max/svc-display-1.jpg",
+        "image1": "/img/iphone-models/12-mini.jpg",
         "image2": "/img/iphone-parts/11-pro-max/svc-display-2.jpg",
         "alt": "iPhone 12 Mini"
     },
     {
-        "id": "1",
+        "id": "5",
         "title": "iPhone 11 Pro Max",
-        "model": "11-pro-max",
+        "type": "11-pro-max",
         "description": "Parts for the iPhone 11 Pro Max",
-        "image1": "/img/iphone-parts/11-pro-max/svc-display-1.jpg",
+        "image1": "/img/iphone-models/11-pro-max.jpg",
         "image2": "/img/iphone-parts/11-pro-max/svc-display-2.jpg",
         "alt": "iPhone 11 Pro Max"
     },
     {
-        "id": "2",
+        "id": "6",
         "title": "iPhone 11 Pro",
-        "model": "11-pro",
+        "type": "11-pro",
         "description": "Parts for the iPhone 11 Pro",
-        "image1": "/img/iphone-parts/11-pro-max/svc-display-1.jpg",
+        "image1": "/img/iphone-models/11-pro.jpg",
         "image2": "/img/iphone-parts/11-pro-max/svc-display-2.jpg",
         "alt": "iPhone 11 Pro"
     },
     {
-        "id": "1",
+        "id": "7",
         "title": "iPhone 11",
-        "model": "11",
+        "type": "11",
         "description": "Parts for the iPhone 11",
-        "image1": "/img/iphone-parts/11-pro-max/svc-display-1.jpg",
+        "image1": "/img/iphone-models/11.jpg",
         "image2": "/img/iphone-parts/11-pro-max/svc-display-2.jpg",
-        "alt": "iPhone 11 Pro Max"
+        "alt": "iPhone 11"
+    },
+    {
+        "id": "8",
+        "title": "iPhone SE (2nd Generation)",
+        "type": "se-2",
+        "description": "Parts for the iPhone SE 2nd Generation",
+        "image1": "/img/iphone-models/se-2.jpg",
+        "image2": "/img/iphone-parts/11-pro-max/svc-display-2.jpg",
+        "alt": "iPhone SE 2nd Generation"
     }
 ]
