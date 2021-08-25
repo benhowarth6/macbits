@@ -7,11 +7,42 @@ import products from "../products/all-parts.json";
 import promoproducts from "../products/promo-parts.json";
 
 export default function Cart() {
-    const { cartItems, checkout, subtotal } = useCart();
+    const { cartItems, checkout, subtotal, updateItem } = useCart();
 
     const data = cartItems.map(({ id, quantity, pricePerUnit }) => {
         const product = products.find(({ id: pid }) => pid === id);
         const { title, image1, partnumber, type, alt, price } = product || {};
+        const Quantity = () => {
+            function handleOnSubmit (e) {
+                e.preventDefault();
+
+                const { currentTarget } = e;
+                const inputs = Array.from(currentTarget.elements)
+                const quantity = inputs.find(input => input.name === 'quantity')?.value
+                
+                updateItem({
+                    id: id,
+                    quantity: quantity &&  parseInt(quantity)
+                })
+
+                console.log('Submit', quantity)
+            }
+            return (
+                <form onSubmit={handleOnSubmit}>
+                <select id="quantity" name="quantity" type="number" min={0} defaultValue={quantity} className={'form-select w-16 max-w-full rounded-md border border-gray-300 py-1.5 text-base leading-5 font-medium text-gray-700 text-left shadow-sm focus:outline-none focus:ring-1 focus:ring-themeColorHover focus:border-themeColorHover sm:text-sm'}>
+                    <option value={1}>1</option>
+                    <option value={2}>2</option>
+                    <option value={3}>3</option>
+                    <option value={4}>4</option>
+                    <option value={5}>5</option>
+                    <option value={6}>6</option>
+                    <option value={7}>7</option>
+                    <option value={8}>8</option>
+                </select>
+                <button className="text-sm text-indigo-600 pl-4">Update</button>
+                </form>
+            )
+        }
         return {
             id,
             title,
@@ -20,7 +51,7 @@ export default function Cart() {
             partnumber,
             type,
             price,
-            quantity,
+            quantity: <Quantity />,
             pricePerUnit,
             total: (quantity * pricePerUnit).toFixed(2)
         }
@@ -43,7 +74,7 @@ export default function Cart() {
                             <h2 id="cart-heading" className="sr-only">Items in your shopping cart</h2>
                             <ul role="list" className="border-t border-b border-gray-200 divide-y divide-gray-200">
                                 {data.map(cartItems => {
-                                    const { id, title, image1, alt, price, partnumber, type } = cartItems;
+                                    const { id, title, image1, alt, price, partnumber, type, quantity } = cartItems;
                                     return (
                                         <li className="flex py-6 sm:py-10">
                                             <div className="flex-shrink-0">
@@ -71,16 +102,7 @@ export default function Cart() {
                                                     </div>
                                                     <div className="mt-4 sm:mt-0 sm:pr-9">
                                                         <label htmlFor="quantity-0" className="sr-only">Quantity, Basic Tee</label>
-                                                        <select id="quantity-0" name="quantity-0" className="max-w-full rounded-md border border-gray-300 py-1.5 text-base leading-5 font-medium text-gray-700 text-left shadow-sm focus:outline-none focus:ring-1 focus:ring-themeColorHover focus:border-themeColorHover sm:text-sm">
-                                                            <option value={1}>1</option>
-                                                            <option value={2}>2</option>
-                                                            <option value={3}>3</option>
-                                                            <option value={4}>4</option>
-                                                            <option value={5}>5</option>
-                                                            <option value={6}>6</option>
-                                                            <option value={7}>7</option>
-                                                            <option value={8}>8</option>
-                                                        </select>
+                                                        {quantity}
                                                         <div className="absolute top-0 right-0">
                                                             <button type="button" className="-m-2 p-2 inline-flex text-gray-400 hover:text-gray-500">
                                                                 <span className="sr-only">Remove</span>
