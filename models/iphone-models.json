@@ -6,7 +6,8 @@
         "description": "Parts for the iPhone 12 Pro Max",
         "image1": "/img/iphone-models/12-pro-max.jpg",
         "image2": "/img/iphone-parts/11-pro-max/svc-display-2.jpg",
-        "alt": "iPhone 12 Pro Max"
+        "alt": "iPhone 12 Pro Max",
+        "slug": "iphone-12-pro-max-parts"
     },
     {
         "id": "2",

@@ -10,6 +10,8 @@ export default function Model({ model }) {
 
   const { id, title, description, type, image1, alt } = model;
 
+    const { addToCart } = useCart();
+
   function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
   }
@@ -31,7 +33,6 @@ export default function Model({ model }) {
             <ul>
             <div className="grid grid-cols-1 gap-y-10 sm:grid-cols-2 gap-x-6 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
             {products.filter(products => products.model == `${type}` ).map(filteredProducts=> {
-              console.log(type)
                 return (
                   <li key={filteredProducts.id}>
                 <Link href={`../iphone-parts/${filteredProducts.id}`}>

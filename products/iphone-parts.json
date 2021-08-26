@@ -14,7 +14,8 @@
         "highlight2": "Highlight",
         "highlight3": "Highlight",
         "highlight4": "Highlight",
-        "details": "Futher product details"
+        "details": "Futher product details",
+        "slug": "iphone-11-pro-max-genuine-svc-display"
     },
     {
         "id": "price_1JS7ilIfCuhjynmuNkjKcbRr",
@@ -136,5 +137,76 @@
         "highlight3": "Highlight",
         "highlight4": "Highlight",
         "details": "Futher product details"
+    },
+    {
+        "id": "price_1JSltVIfCuhjynmuI2B57AN8",
+        "title": "iPhone 11 SVC Display",
+        "model": "11",
+        "description": "Genuine Apple Service Pack OLED display assembly for the iPhone 11",
+        "type": "display",
+        "price": "289",
+        "image1": "/img/iphone-parts/11/svc-display-1.jpg",
+        "image2": "/img/iphone-parts/11/svc-display-2.jpg",
+        "image3": "/img/iphone-parts/11/svc-display-3.jpg",
+        "alt": "iPhone 11 SVC Display",
+        "partnumber": "661-14096",
+        "highlight1": "Highlight",
+        "highlight2": "Highlight",
+        "highlight3": "Highlight",
+        "highlight4": "Highlight",
+        "details": "Futher product details"
+    },
+    {
+        "id": "price_1JSltVIfCuhjynmuI2B57AN8",
+        "title": "iPhone 11 SVC Battery",
+        "model": "11",
+        "description": "Genuine Apple Service Pack battery for the iPhone 11",
+        "type": "battery",
+        "price": "59",
+        "image1": "/img/iphone-parts/11/svc-battery-1.jpg",
+        "image2": "/img/iphone-parts/11/svc-battery-2.jpg",
+        "image3": "/img/iphone-parts/11/svc-battery-3.jpg",
+        "alt": "iPhone 11 SVC Battery",
+        "partnumber": "661-13569",
+        "highlight1": "Highlight",
+        "highlight2": "Highlight",
+        "highlight3": "Highlight",
+        "highlight4": "Highlight",
+        "details": "Futher product details"
+    },
+    {
+        "id": "price_1JSltVIfCuhjynmuI2B57AN8",
+        "title": "iPhone 11 SVC Rear Camera",
+        "model": "11",
+        "description": "Genuine Apple Service Pack triple rear camera assembly for the iPhone 11",
+        "type": "camera",
+        "price": "69",
+        "image1": "/img/iphone-parts/11/svc-camera-1.jpg",
+        "image2": "/img/iphone-parts/11/svc-camera-2.jpg",
+        "alt": "iPhone 11 SVC Rear Camera",
+        "partnumber": "661-13570",
+        "highlight1": "Highlight",
+        "highlight2": "Highlight",
+        "highlight3": "Highlight",
+        "highlight4": "Highlight",
+        "details": "Futher product details"
+    },
+    {
+        "id": "price_1JSltVIfCuhjynmuI2B57AN8",
+        "title": "iPhone 11 Charging Port",
+        "model": "11",
+        "description": "Genuine Apple Service Pack charging port assembly for the iPhone 11",
+        "type": "charging-port",
+        "price": "49",
+        "image1": "/img/iphone-parts/11/charging-port-1.jpg",
+        "image2": "/img/iphone-parts/11/charging-port-2.jpg",
+        "alt": "iPhone 11 Charging Port",
+        "partnumber": "661-14099",
+        "highlight1": "Highlight",
+        "highlight2": "Highlight",
+        "highlight3": "Highlight",
+        "highlight4": "Highlight",
+        "details": "Futher product details"
     }
+    
 ]

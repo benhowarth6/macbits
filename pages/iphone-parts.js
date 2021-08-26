@@ -22,7 +22,7 @@ export default function Home() {
 
       <div className="px-10 justify-center flex flex-col bg-gray-50" >
         <div className="flex flex-col items-center justify-center gap-4 py-20 " >
-            <h1 className="text-4xl font-extrabold" >iPhone Parts</h1>
+            <h1 className="text-4xl tracking-tight font-extrabold" >iPhone Parts</h1>
             <span className="mt-4 text-gray-500">Select a model of iPhone below to view our range of parts.</span>
             <span className="text-gray-500">We supply new genuine service parts as well as reclaimed genuine parts.</span>
         </div>
