@@ -7,39 +7,39 @@ import products from "../products/all-parts.json";
 import promoproducts from "../products/promo-parts.json";
 
 export default function Cart() {
-    const { cartItems, checkout, subtotal, updateItem } = useCart();
+    const { cartItems, checkout, subtotal, updateItem, removeItem } = useCart();
 
     const data = cartItems.map(({ id, quantity, pricePerUnit }) => {
         const product = products.find(({ id: pid }) => pid === id);
         const { title, image1, partnumber, type, alt, price } = product || {};
         const Quantity = () => {
-            function handleOnSubmit (e) {
+            function handleOnSubmit(e) {
                 e.preventDefault();
 
                 const { currentTarget } = e;
                 const inputs = Array.from(currentTarget.elements)
                 const quantity = inputs.find(input => input.name === 'quantity')?.value
-                
+
                 updateItem({
                     id: id,
-                    quantity: quantity &&  parseInt(quantity)
+                    quantity: quantity && parseInt(quantity)
                 })
 
                 console.log('Submit', quantity)
             }
             return (
                 <form onSubmit={handleOnSubmit}>
-                <select id="quantity" name="quantity" type="number" min={0} defaultValue={quantity} className={'form-select w-16 max-w-full rounded-md border border-gray-300 py-1.5 text-base leading-5 font-medium text-gray-700 text-left shadow-sm focus:outline-none focus:ring-1 focus:ring-themeColorHover focus:border-themeColorHover sm:text-sm'}>
-                    <option value={1}>1</option>
-                    <option value={2}>2</option>
-                    <option value={3}>3</option>
-                    <option value={4}>4</option>
-                    <option value={5}>5</option>
-                    <option value={6}>6</option>
-                    <option value={7}>7</option>
-                    <option value={8}>8</option>
-                </select>
-                <button className="text-sm text-indigo-600 pl-4">Update</button>
+                    <select id="quantity" name="quantity" type="number" min={0} defaultValue={quantity} className={'form-select w-16 max-w-full rounded-md border border-gray-300 py-1.5 text-base leading-5 font-medium text-gray-700 text-left shadow-sm focus:outline-none focus:ring-1 focus:ring-themeColorHover focus:border-themeColorHover sm:text-sm'}>
+                        <option value={1}>1</option>
+                        <option value={2}>2</option>
+                        <option value={3}>3</option>
+                        <option value={4}>4</option>
+                        <option value={5}>5</option>
+                        <option value={6}>6</option>
+                        <option value={7}>7</option>
+                        <option value={8}>8</option>
+                    </select>
+                    <button className="text-sm text-indigo-600 pl-4">Update</button>
                 </form>
             )
         }
@@ -101,10 +101,12 @@ export default function Cart() {
                                                         <p className="mt-1 text-sm font-medium text-gray-900">£{price}</p>
                                                     </div>
                                                     <div className="mt-4 sm:mt-0 sm:pr-9">
-                                                        <label htmlFor="quantity-0" className="sr-only">Quantity, Basic Tee</label>
+                                                        <label htmlFor="quantity-0" className="sr-only">Quantity</label>
                                                         {quantity}
                                                         <div className="absolute top-0 right-0">
-                                                            <button type="button" className="-m-2 p-2 inline-flex text-gray-400 hover:text-gray-500">
+                                                            <button type="button"
+                                                                onClick={() => removeItem({ id })}
+                                                                className="-m-2 p-2 inline-flex text-gray-400 hover:text-gray-500">
                                                                 <span className="sr-only">Remove</span>
                                                                 {/* Heroicon name: solid/x */}
                                                                 <svg className="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -134,7 +136,7 @@ export default function Cart() {
                                 <div className="flex items-center justify-between">
                                     <dt className="text-sm text-gray-600">
                                         Subtotal
-                      </dt>
+                                    </dt>
                                     <dd className="text-sm font-medium text-gray-900">
                                         £{subtotal}
                                     </dd>
@@ -151,13 +153,13 @@ export default function Cart() {
                                         </a>
                                     </dt>
                                     <dd className="text-sm font-medium text-gray-900">
-                                        £5.00
-                      </dd>
+                                        £5
+                                    </dd>
                                 </div>
                                 <div className="border-t border-gray-200 pt-4 flex items-center justify-between">
                                     <dt className="text-base font-medium text-gray-900">
                                         Order total
-                      </dt>
+                                    </dt>
                                     <dd className="text-base font-medium text-gray-900">
                                         £{subtotal + 5}
                                     </dd>

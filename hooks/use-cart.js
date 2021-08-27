@@ -71,6 +71,19 @@ export function useCartState() {
       return cart;
     })
   }
+
+  function removeItem ({ id }) {
+    updateCart(prev => {
+      let cart = { ...prev }
+
+      if (cart.products[id]) {
+        delete cart.products[id]
+      }
+
+      return cart
+    })
+  }
+
   function checkout() {
     initiateCheckout({
       lineItems: cartItems.map(({ id, quantity }) => {
@@ -88,6 +101,7 @@ export function useCartState() {
     cartItems,
     quantity,
     addToCart,
+    removeItem,
     updateItem,
     checkout
   }
