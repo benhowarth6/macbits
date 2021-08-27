@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link';
 
+
 import { useCart } from '../../hooks/use-cart.js';
 
 import models from '../../models/iphone-models.json';
@@ -35,7 +36,7 @@ export default function Model({ model }) {
             {products.filter(products => products.model == `${type}` ).map(filteredProducts=> {
               const { id, title, price, image1, alt } = filteredProducts;
                 return (
-                  <li key={id}>
+                <li key={id}>
                 <Link href={`../iphone-parts/${id}`}>
                 <a className="group">
                   <div className="w-full aspect-w-1 aspect-h-1 bg-gray-200 rounded-lg overflow-hidden xl:aspect-w-7 xl:aspect-h-8">

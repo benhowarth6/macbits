@@ -16,7 +16,8 @@
         "description": "Parts for the iPhone 12 Pro",
         "image1": "/img/iphone-models/12-pro.jpg",
         "image2": "/img/iphone-parts/11-pro-max/svc-display-2.jpg",
-        "alt": "iPhone 12 Pro"
+        "alt": "iPhone 12 Pro",
+        "slug": "iphone-12-pro-parts"
     },
     {
         "id": "3",

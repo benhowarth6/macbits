@@ -7,6 +7,8 @@ import models from "../models/iphone-models.json";
 
 import { useCart } from '../hooks/use-cart.js';
 
+const { id, title } = models;
+
 const navigation = {
   categories: [
     {
@@ -16,13 +18,13 @@ const navigation = {
         {
           name: 'New Arrivals',
           href: '#',
-          imageSrc: 'img/iphone-parts/11-pro-max/svc-camera-1.jpg',
+          imageSrc: '/img/iphone-parts/11-pro-max/svc-camera-1.jpg',
           imageAlt: 'Models sitting back to back, wearing Basic Tee in black and bone.',
         },
         {
           name: 'SVC Parts',
           href: '#',
-          imageSrc: 'img/iphone-parts/11-pro-max/svc-display-2.jpg',
+          imageSrc: '/img/iphone-parts/11-pro-max/svc-display-2.jpg',
           imageAlt: 'Close up of Basic Tee fall bundle with off-white, ochre, olive, and black tees.',
         },
       ],
@@ -31,13 +33,13 @@ const navigation = {
           id: 'models',
           name: 'Models',
           items: [
-            { name: 'iPhone 12 Pro Max', href: '#' },
-            { name: 'iPhone 12 Pro', href: '#' },
-            { name: 'iPhone 12', href: '#' },
-            { name: 'iPhone 12 Mini', href: '#' },
-            { name: 'iPhone 11 Pro Max', href: '#' },
-            { name: 'iPhone 11 Pro', href: '#' },
-            { name: 'iPhone 11', href: '#' },
+            { name: 'iPhone 12 Pro Max', href: '/iphone-models/1' },
+            { name: 'iPhone 12 Pro', href: '/iphone-models/2' },
+            { name: 'iPhone 12', href: '/iphone-models/3' },
+            { name: 'iPhone 12 Mini', href: '/iphone-models/4' },
+            { name: 'iPhone 11 Pro Max', href: '/iphone-models/5' },
+            { name: 'iPhone 11 Pro', href: '/iphone-models/6' },
+            { name: 'iPhone 11', href: '/iphone-models/7' },
             { name: 'iPhone XS Max', href: '#' },
             { name: 'Browse All', href: '../iphone-parts' },
           ],
@@ -46,7 +48,7 @@ const navigation = {
           id: 'part',
           name: 'Part Type',
           items: [
-            { name: 'Display Assembly', href: '#' },
+            { name: 'Display Assemblies', href: '#' },
             { name: 'Batteries', href: '#' },
             { name: 'Charging Ports', href: '#' },
             { name: 'Cameras', href: '#' },
@@ -131,29 +133,29 @@ const navigation = {
 }
 
 const products = [
-    {
-      id: 1,
-      name: 'Throwback Hip Bag',
-      href: '#',
-      color: 'Salmon',
-      price: '$90.00',
-      quantity: 1,
-      imageSrc: 'https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-01.jpg',
-      imageAlt: 'Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt.',
-    },
-    {
-      id: 2,
-      name: 'Medium Stuff Satchel',
-      href: '#',
-      color: 'Blue',
-      price: '$32.00',
-      quantity: 1,
-      imageSrc: 'https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-02.jpg',
-      imageAlt:
-        'Front of satchel with blue canvas body, black straps and handle, drawstring top, and front zipper pouch.',
-    },
-    // More products...
-  ]
+  {
+    id: 1,
+    name: 'Throwback Hip Bag',
+    href: '#',
+    color: 'Salmon',
+    price: '$90.00',
+    quantity: 1,
+    imageSrc: 'https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-01.jpg',
+    imageAlt: 'Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt.',
+  },
+  {
+    id: 2,
+    name: 'Medium Stuff Satchel',
+    href: '#',
+    color: 'Blue',
+    price: '$32.00',
+    quantity: 1,
+    imageSrc: 'https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-02.jpg',
+    imageAlt:
+      'Front of satchel with blue canvas body, black straps and handle, drawstring top, and front zipper pouch.',
+  },
+  // More products...
+]
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -324,14 +326,14 @@ export default function Navigation() {
               {/* Logo */}
               <div className="ml-4 flex lg:ml-0">
                 <Link href="/">
-                <a>
-                  <span className="sr-only">Workflow</span>
-                  <img
-                    className="h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/workflow-mark.svg?color=indigo&shade=600"
-                    alt=""
-                  />
-                </a>
+                  <a>
+                    <span className="sr-only">Workflow</span>
+                    <img
+                      className="h-8 w-auto"
+                      src="https://tailwindui.com/img/logos/workflow-mark.svg?color=indigo&shade=600"
+                      alt=""
+                    />
+                  </a>
                 </Link>
               </div>
 
@@ -365,6 +367,7 @@ export default function Navigation() {
                             leaveTo="opacity-0"
                           >
                             <Popover.Panel className="absolute top-full inset-x-0 text-sm text-gray-500">
+
                               {/* Presentational element used to render the bottom shadow, if we put the shadow on the actual panel it pokes out the top, so we use this shorter element to hide the top of the shadow */}
                               <div className="absolute inset-0 top-1/2 bg-white shadow" aria-hidden="true" />
 
@@ -392,26 +395,38 @@ export default function Navigation() {
                                       ))}
                                     </div>
                                     <div className="row-start-1 grid grid-cols-3 gap-y-10 gap-x-8 text-sm">
-                                      {category.sections.map((section) => (
-                                        <div key={section.name}>
-                                          <p id={`${section.name}-heading`} className="font-medium text-gray-900">
-                                            {section.name}
-                                          </p>
-                                          <ul
-                                            role="list"
-                                            aria-labelledby={`${section.name}-heading`}
-                                            className="mt-6 space-y-6 sm:mt-4 sm:space-y-4"
-                                          >
-                                            {section.items.map((item) => (
-                                              <li key={item.name} className="flex">
-                                                <a href={item.href} className="hover:text-gray-800">
-                                                  {item.name}
-                                                </a>
+                                      <div>
+                                        <p id="iphone-models-heading" className="font-medium text-gray-900">
+                                          Models
+                                        </p>
+                                        <ul
+                                          role="list"
+                                          aria-labelledby="iphone-models-heading"
+                                          className="mt-6 space-y-6 sm:mt-4 sm:space-y-4"
+                                        >
+                                          {models.slice(0, 8).map(models => {
+                                            const { id, title } = models;
+                                            return (
+                                              <li key={id} className="flex">
+                                                <Popover.Button onClick={() => (open = false)}>
+                                                  <Link href={`/iphone-models/${id}`}>
+                                                    <a className="hover:text-gray-800 truncate">
+                                                      {title}
+                                                    </a>
+                                                  </Link>
+                                                </Popover.Button>
                                               </li>
-                                            ))}
-                                          </ul>
-                                        </div>
-                                      ))}
+                                            )
+                                          })}
+                                          <Popover.Button onClick={() => (open = false)}>
+                                            <Link href={`/iphone-parts`}>
+                                              <a className="flex hover:text-gray-800 truncate">
+                                                Browse all
+                                              </a>
+                                            </Link>
+                                          </Popover.Button>
+                                        </ul>
+                                      </div>
                                     </div>
                                   </div>
                                 </div>
@@ -440,14 +455,14 @@ export default function Navigation() {
                 {/* Cart */}
                 <div className="ml-4 flow-root lg:ml-6">
                   <Link href="/cart">
-                  <a className="group -m-2 p-2 flex items-center">
-                    <ShoppingBagIcon
-                      className="flex-shrink-0 h-6 w-6 text-gray-400 group-hover:text-gray-500"
-                      aria-hidden="true"
-                    />
-                    <span className="ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800">{quantity}</span>
-                    <span className="sr-only">items in cart, view bag</span>
-                  </a>
+                    <a className="group -m-2 p-2 flex items-center">
+                      <ShoppingBagIcon
+                        className="flex-shrink-0 h-6 w-6 text-gray-400 group-hover:text-gray-500"
+                        aria-hidden="true"
+                      />
+                      <span className="ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800">{quantity}</span>
+                      <span className="sr-only">items in cart, view bag</span>
+                    </a>
                   </Link>
                 </div>
               </div>

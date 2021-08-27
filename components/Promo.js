@@ -23,14 +23,14 @@ export default function Promo() {
                       <div className="flex-shrink-0 grid grid-cols-1 gap-y-6 lg:gap-y-8">
                         <div className="w-44 h-64 rounded-lg overflow-hidden sm:opacity-0 lg:opacity-100">
                           <img
-                            src="img/promo/promo-1.jpg"
+                            src="/img/iphone-parts/11-pro-max/svc-display-1.jpg"
                             alt=""
                             className="w-full h-full object-center object-cover"
                           />
                         </div>
                         <div className="w-44 h-64 rounded-lg overflow-hidden">
                           <img
-                            src="img/promo/promo-2.jpg"
+                            src="/img/iphone-parts/11-pro-max/svc-battery-1.jpg"
                             alt=""
                             className="w-full h-full object-center object-cover"
                           />
@@ -39,14 +39,14 @@ export default function Promo() {
                       <div className="flex-shrink-0 grid grid-cols-1 gap-y-6 lg:gap-y-8">
                         <div className="w-44 h-64 rounded-lg overflow-hidden">
                           <img
-                            src="img/promo/promo-3.jpg"
+                            src="/img/iphone-parts/11-pro-max/svc-camera-1.jpg"
                             alt=""
                             className="w-full h-full object-center object-cover"
                           />
                         </div>
                         <div className="w-44 h-64 rounded-lg overflow-hidden">
                           <img
-                            src="img/promo/promo-4.jpg"
+                            src="/img/iphone-parts/11-pro-max/charging-port-1.jpg"
                             alt=""
                             className="w-full h-full object-center object-cover"
                           />
