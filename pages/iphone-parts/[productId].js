@@ -89,16 +89,16 @@ export default function Product({ product }) {
 
                                         <div className="mt-4">
                                             <ul role="list" className="pl-4 list-disc text-sm space-y-2">
-                                                <li className="text-gray-400">
+                                                <li key={ highlight1 } className="text-gray-400">
                                                     <span className="text-gray-600">{highlight1}</span>
                                                 </li>
-                                                <li className="text-gray-400">
+                                                <li key={ highlight2 } className="text-gray-400">
                                                     <span className="text-gray-600">{highlight2}</span>
                                                 </li>
-                                                <li className="text-gray-400">
+                                                <li key={ highlight3 } className="text-gray-400">
                                                     <span className="text-gray-600">{highlight3}</span>
                                                 </li>
-                                                <li className="text-gray-400">
+                                                <li key={ highlight4 }className="text-gray-400">
                                                     <span className="text-gray-600">{highlight4}</span>
                                                 </li>
 
@@ -108,21 +108,21 @@ export default function Product({ product }) {
 
 
                                     <div className="mt-6 flex items-center">
-                                        <CheckIcon class="flex-shrink-0 w-5 h-5 text-green-500" aria-hidden="true" />
+                                        <CheckIcon className="flex-shrink-0 w-5 h-5 text-green-500" aria-hidden="true" />
                                         <p className="ml-2 text-sm text-gray-500">In stock and ready to ship</p>
                                     </div>
-                                    <div class="mt-10">
+                                    <div className="mt-10">
                                         <button onClick={() => {
                                             addToCart({
                                                 id
                                             })
                                         }}
-                                            class="w-full bg-indigo-600 border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-indigo-500">Add to bag</button>
+                                            className="w-full bg-indigo-600 border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-indigo-500">Add to bag</button>
                                     </div>
-                                    <div class="mt-6 text-center">
-                                        <a href="#" class="group inline-flex text-base font-medium">
-                                            <ShieldCheckIcon class="flex-shrink-0 mr-2 h-6 w-6 text-gray-400 group-hover:text-gray-500" aria-hidden="true" />
-                                            <span class="text-gray-500 hover:text-gray-700">Lifetime Guarantee</span>
+                                    <div className="mt-6 text-center">
+                                        <a href="#" className="group inline-flex text-base font-medium">
+                                            <ShieldCheckIcon className="flex-shrink-0 mr-2 h-6 w-6 text-gray-400 group-hover:text-gray-500" aria-hidden="true" />
+                                            <span className="text-gray-500 hover:text-gray-700">Lifetime Guarantee</span>
                                         </a>
                                     </div>
                                 </section>
@@ -165,26 +165,26 @@ export default function Product({ product }) {
                         </section>
 
                         {/* Policies section */}
-                        <section aria-labelledby="policy-heading" class="mt-16 lg:mt-24">
-                            <h2 id="policy-heading" class="sr-only">Our policies</h2>
-                            <div class="grid grid-cols-1 gap-y-12 sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-4 lg:gap-x-8">
-                            {policies.map((policy) => (
-                                <div key={policy.name}>
-                                <img src={policy.imageSrc} alt="" class="h-24 w-auto" />
-                                <h3 class="mt-6 text-base font-medium text-gray-900">
-                                    { policy.name }
-                                </h3>
-                                <p class="mt-3 text-base text-gray-500">
-                                    { policy.description }
-                                </p>
+                        <section aria-labelledby="policy-heading" className="mt-16 lg:mt-24">
+                            <h2 id="policy-heading" className="sr-only">Our policies</h2>
+                            <div className="grid grid-cols-1 gap-y-12 sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-4 lg:gap-x-8">
+                                {policies.map((policy) => (
+                                    <div key={policy.name}>
+                                        <img src={policy.imageSrc} alt="" className="h-24 w-auto" />
+                                        <h3 className="mt-6 text-base font-medium text-gray-900">
+                                            {policy.name}
+                                        </h3>
+                                        <p className="mt-3 text-base text-gray-500">
+                                            {policy.description}
+                                        </p>
+                                    </div>
+                                ))}
                             </div>
-                            ))}
-          </div>
-        </section>
+                        </section>
                     </div>
                 </main>
 
-        </div>
+            </div>
 
 
         </>

@@ -41,7 +41,7 @@ const navigation = {
             { name: 'iPhone 11 Pro', href: '/iphone-models/6' },
             { name: 'iPhone 11', href: '/iphone-models/7' },
             { name: 'iPhone XS Max', href: '#' },
-            { name: 'Browse All', href: '../iphone-parts' },
+            { name: 'Browse All', href: '/iphone-parts' },
           ],
         },
         {
@@ -411,7 +411,7 @@ export default function Navigation() {
                                                 <Popover.Button onClick={() => (open = false)}>
                                                   <Link href={`/iphone-models/${id}`}>
                                                     <a className="hover:text-gray-800 truncate">
-                                                      {title}
+                                                      { title }
                                                     </a>
                                                   </Link>
                                                 </Popover.Button>
