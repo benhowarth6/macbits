@@ -1,6 +1,6 @@
 import Head from 'next/head'
 
-import { ShieldCheckIcon, CheckIcon } from '@heroicons/react/solid'
+import { ShieldCheckIcon, CheckIcon } from '@heroicons/react/outline'
 
 import { useCart } from '../../hooks/use-cart.js';
 
@@ -89,16 +89,16 @@ export default function Product({ product }) {
 
                                         <div className="mt-4">
                                             <ul role="list" className="pl-4 list-disc text-sm space-y-2">
-                                                <li key={ highlight1 } className="text-gray-400">
+                                                <li key={highlight1} className="text-gray-400">
                                                     <span className="text-gray-600">{highlight1}</span>
                                                 </li>
-                                                <li key={ highlight2 } className="text-gray-400">
+                                                <li key={highlight2} className="text-gray-400">
                                                     <span className="text-gray-600">{highlight2}</span>
                                                 </li>
-                                                <li key={ highlight3 } className="text-gray-400">
+                                                <li key={highlight3} className="text-gray-400">
                                                     <span className="text-gray-600">{highlight3}</span>
                                                 </li>
-                                                <li key={ highlight4 }className="text-gray-400">
+                                                <li key={highlight4} className="text-gray-400">
                                                     <span className="text-gray-600">{highlight4}</span>
                                                 </li>
 
@@ -107,24 +107,13 @@ export default function Product({ product }) {
                                     </div>
 
 
+
+
                                     <div className="mt-6 flex items-center">
                                         <CheckIcon className="flex-shrink-0 w-5 h-5 text-green-500" aria-hidden="true" />
                                         <p className="ml-2 text-sm text-gray-500">In stock and ready to ship</p>
                                     </div>
-                                    <div className="mt-10">
-                                        <button onClick={() => {
-                                            addToCart({
-                                                id
-                                            })
-                                        }}
-                                            className="w-full bg-indigo-600 border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-indigo-500">Add to bag</button>
-                                    </div>
-                                    <div className="mt-6 text-center">
-                                        <a href="#" className="group inline-flex text-base font-medium">
-                                            <ShieldCheckIcon className="flex-shrink-0 mr-2 h-6 w-6 text-gray-400 group-hover:text-gray-500" aria-hidden="true" />
-                                            <span className="text-gray-500 hover:text-gray-700">Lifetime Guarantee</span>
-                                        </a>
-                                    </div>
+
                                 </section>
                             </div>
 
@@ -136,6 +125,28 @@ export default function Product({ product }) {
                                         alt={alt}
                                         className="w-full h-full object-center object-cover" />
                                 </div>
+                            </div>
+
+
+                            <div class="mt-10 lg:mt-0 lg:max-w-lg lg:col-start-1 lg:row-start-2 lg:self-start">
+                                <section aria-labelledby="options-heading">
+
+                                    <div class="mt-10">
+                                        <button
+                                            onClick={() => {
+                                                addToCart({
+                                                    id
+                                                })
+                                            }}
+                                            class="w-full bg-indigo-600 border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-indigo-500">Add to bag</button>
+                                    </div>
+                                    <div class="mt-6 text-center">
+                                        <a href="#" class="group inline-flex text-base font-medium">
+                                            <ShieldCheckIcon class="flex-shrink-0 mr-2 h-6 w-6 text-gray-400 group-hover:text-gray-500" aria-hidden="true" />
+                                            <span class="text-gray-500 hover:text-gray-700">Lifetime Guarantee</span>
+                                        </a>
+                                    </div>
+                                </section>
                             </div>
                         </div>
                     </div>
