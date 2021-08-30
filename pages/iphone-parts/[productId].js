@@ -1,6 +1,6 @@
 import Head from 'next/head'
 
-import { ShieldCheckIcon, CheckIcon } from '@heroicons/react/outline'
+import { ShieldCheckIcon, CheckIcon, XIcon } from '@heroicons/react/outline'
 
 import { useCart } from '../../hooks/use-cart.js';
 
@@ -8,7 +8,7 @@ import products from '../../products/iphone-parts.json';
 
 export default function Product({ product }) {
 
-    const { id, title, description, image1, image2, alt, price, partnumber, type, model, highlight1, highlight2, highlight3, highlight4, details } = product;
+    const { id, title, description, image1, image2, alt, price, partnumber, type, model, highlight1, highlight2, highlight3, highlight4, details, quality, instock } = product;
 
     const { addToCart } = useCart();
 
@@ -78,6 +78,15 @@ export default function Product({ product }) {
                                                 </div>
                                             </div>
                                         </div>
+                                        <div className="ml-4 pl-4 border-l border-gray-300">
+                                            <h2 className="sr-only">Part number</h2>
+                                            <div className="flex items-center">
+                                                {quality == "SVC"
+                                                    ? <p className="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">Genuine SVC Part</p>
+                                                    : <p></p>
+                                                }
+                                            </div>
+                                        </div>
                                     </div>
 
                                     <div className="mt-4 space-y-6">
@@ -105,15 +114,6 @@ export default function Product({ product }) {
                                             </ul>
                                         </div>
                                     </div>
-
-
-
-
-                                    <div className="mt-6 flex items-center">
-                                        <CheckIcon className="flex-shrink-0 w-5 h-5 text-green-500" aria-hidden="true" />
-                                        <p className="ml-2 text-sm text-gray-500">In stock and ready to ship</p>
-                                    </div>
-
                                 </section>
                             </div>
 
@@ -127,27 +127,55 @@ export default function Product({ product }) {
                                 </div>
                             </div>
 
+                            {instock == "yes"
+                                                    ? <div class="mt-10 lg:mt-0 lg:max-w-lg lg:col-start-1 lg:row-start-2 lg:self-start">
 
-                            <div class="mt-10 lg:mt-0 lg:max-w-lg lg:col-start-1 lg:row-start-2 lg:self-start">
-                                <section aria-labelledby="options-heading">
+                                                    <div className="mt-6 flex items-center">
+                                                                <CheckIcon className="flex-shrink-0 w-5 h-5 text-green-500" aria-hidden="true" />
+                                                                <p className="ml-2 text-sm text-gray-500">In stock and ready to ship</p>
+                                                            </div>
+                                                        <section aria-labelledby="options-heading">
+                        
+                                                            <div class="mt-10">
+                                                                <button
+                                                                    onClick={() => {
+                                                                        addToCart({
+                                                                            id
+                                                                        })
+                                                                    }}
+                                                                    class="w-full bg-indigo-600 border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-indigo-500">Add to bag</button>
+                                                            </div>
+                                                            <div class="mt-6 text-center">
+                                                                <a href="#" class="group inline-flex text-base font-medium">
+                                                                    <ShieldCheckIcon class="flex-shrink-0 mr-2 h-6 w-6 text-gray-400 group-hover:text-gray-500" aria-hidden="true" />
+                                                                    <span class="text-gray-500 hover:text-gray-700">Lifetime Guarantee</span>
+                                                                </a>
+                                                            </div>
+                                                        </section>
+                                                    </div>
+                                                    : <div class="mt-10 lg:mt-0 lg:max-w-lg lg:col-start-1 lg:row-start-2 lg:self-start">
 
-                                    <div class="mt-10">
-                                        <button
-                                            onClick={() => {
-                                                addToCart({
-                                                    id
-                                                })
-                                            }}
-                                            class="w-full bg-indigo-600 border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-indigo-500">Add to bag</button>
-                                    </div>
-                                    <div class="mt-6 text-center">
-                                        <a href="#" class="group inline-flex text-base font-medium">
-                                            <ShieldCheckIcon class="flex-shrink-0 mr-2 h-6 w-6 text-gray-400 group-hover:text-gray-500" aria-hidden="true" />
-                                            <span class="text-gray-500 hover:text-gray-700">Lifetime Guarantee</span>
-                                        </a>
-                                    </div>
-                                </section>
-                            </div>
+                                                    <div className="mt-6 flex items-center">
+                                                                <XIcon className="flex-shrink-0 w-5 h-5 text-red-500" aria-hidden="true" />
+                                                                <p className="ml-2 text-sm text-gray-500">Currently out of stock</p>
+                                                            </div>
+                                                        <section aria-labelledby="options-heading">
+                        
+                                                            <div class="mt-10">
+                                                                <button
+                                                                    disabled
+                                                                    class="disabled:opacity-50 w-full bg-indigo-600 border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-indigo-500">Add to bag</button>
+                                                            </div>
+                                                            <div class="mt-6 text-center">
+                                                                <a href="#" class="group inline-flex text-base font-medium">
+                                                                    <ShieldCheckIcon class="flex-shrink-0 mr-2 h-6 w-6 text-gray-400 group-hover:text-gray-500" aria-hidden="true" />
+                                                                    <span class="text-gray-500 hover:text-gray-700">Lifetime Guarantee</span>
+                                                                </a>
+                                                            </div>
+                                                        </section>
+                                                    </div>
+                                                }
+                            
                         </div>
                     </div>
 

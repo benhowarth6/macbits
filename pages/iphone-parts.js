@@ -19,12 +19,13 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-
       <div className="px-10 justify-center flex flex-col bg-gray-50" >
-        <div className="flex flex-col items-center justify-center gap-4 py-20 " >
-          <h1 className="text-4xl tracking-tight font-extrabold" >iPhone Parts</h1>
-          <span className="mt-4 text-gray-500">Select a model of iPhone below to view our range of parts.</span>
-          <span className="text-gray-500">We supply new genuine service parts as well as reclaimed genuine parts.</span>
+        <div className="py-24 text-center">
+          <h1 className="text-4xl font-extrabold tracking-tight text-gray-900">iPhone Parts</h1>
+          <p className="mt-4 max-w-3xl mx-auto text-base text-gray-500">
+            We supply new genuine service parts as well as reclaimed genuine parts.
+          </p>
+          <p className="mt-2 max-w-3xl mx-auto text-base text-gray-500">Select a model of iPhone below to view our range of parts.</p>
         </div>
       </div>
       <div className="bg-white">

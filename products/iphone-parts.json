@@ -5,6 +5,7 @@
         "model": "11-pro-max",
         "description": "Don’t compromise on quality with this genuine Apple service pack display assembly. Including proximity and light sensor array, screw set and a genuine display seal. This display can be programmed with True Tone and auto brightness.",
         "type": "display",
+        "quality": "SVC",
         "price": "289",
         "image1": "/img/iphone-parts/11-pro-max/svc-display-1.jpg",
         "image2": "/img/iphone-parts/11-pro-max/svc-display-2.jpg",
@@ -16,7 +17,8 @@
         "highlight3": "Programmable for True-Tone & auto brightness",
         "highlight4": "Guaranteed to fully work with no faults",
         "details": "Futher product details",
-        "slug": "iphone-11-pro-max-genuine-svc-display"
+        "slug": "iphone-11-pro-max-genuine-svc-display",
+        "instock": "yes"
     },
     {
         "id": "price_1JS7ilIfCuhjynmuNkjKcbRr",
@@ -24,6 +26,7 @@
         "model": "11-pro-max",
         "description": "Genuine Apple Service Pack battery for the iPhone 11 Pro Max",
         "type": "battery",
+        "quality": "SVC",
         "price": "59",
         "image1": "/img/iphone-parts/11-pro-max/svc-battery-1.jpg",
         "image2": "/img/iphone-parts/11-pro-max/svc-battery-2.jpg",
@@ -34,7 +37,8 @@
         "highlight2": "Highlight",
         "highlight3": "Highlight",
         "highlight4": "Highlight",
-        "details": "Futher product details"
+        "details": "Futher product details",
+        "instock": "no"
     },
     {
         "id": "price_1JS7jUIfCuhjynmuuZBzwxzy",
@@ -42,6 +46,7 @@
         "model": "11-pro-max",
         "description": "Genuine Apple Service Pack triple rear camera assembly for the iPhone 11 Pro Max",
         "type": "camera",
+        "quality": "SVC",
         "price": "69",
         "image1": "/img/iphone-parts/11-pro-max/svc-camera-1.jpg",
         "image2": "/img/iphone-parts/11-pro-max/svc-camera-2.jpg",
@@ -51,7 +56,8 @@
         "highlight2": "Highlight",
         "highlight3": "Highlight",
         "highlight4": "Highlight",
-        "details": "Futher product details"
+        "details": "Futher product details",
+        "instock": "yes"
     },
     {
         "id": "price_1JS7kdIfCuhjynmuaIVwa20X",
@@ -59,6 +65,7 @@
         "model": "11-pro-max",
         "description": "Genuine Apple Service Pack charging port assembly for the iPhone 11 Pro Max",
         "type": "charging-port",
+        "quality": "OEM",
         "price": "49",
         "image1": "/img/iphone-parts/11-pro-max/charging-port-1.jpg",
         "image2": "/img/iphone-parts/11-pro-max/charging-port-2.jpg",
@@ -68,7 +75,8 @@
         "highlight2": "Highlight",
         "highlight3": "Highlight",
         "highlight4": "Highlight",
-        "details": "Futher product details"
+        "details": "Futher product details",
+        "instock": "yes"
     },
     {
         "id": "price_1JSO1kIfCuhjynmuvierc0Qt",

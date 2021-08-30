@@ -1,58 +1,57 @@
 import Link from 'next/link';
 
-const callouts = [
+const categories = [
   {
     name: 'iPhone Parts',
-    description: 'Genuine SVC and reclaimed parts',
-    imageSrc: 'https://images.unsplash.com/photo-1605170439002-90845e8c0137?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=3561&q=80',
-    imageAlt: 'Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug.',
     href: '/iphone-parts',
+    imageSrc: '/img/category/iphone-parts.jpg',
+    imageAlt: 'Brown leather key ring with brass metal loops and rivets on wood table.',
+    description: 'Replacement iPhone parts, including genuine service parts, reclaimed genuine parts and quality third party options.',
   },
   {
     name: 'MacBook Parts',
-    description: 'Genuine Parts and recycled parts',
-    imageSrc: 'https://images.unsplash.com/photo-1523289619259-44358ba02ba5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80',
-    imageAlt: 'Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant.',
     href: '#',
+    imageSrc: '/img/category/macbook-parts.jpg',
+    imageAlt: 'Natural leather mouse pad on white desk next to porcelain mug and keyboard.',
+    description: 'Replacement MacBook parts, including genuine service parts, reclaimed genuine parts and quality third party options.',
   },
   {
-    name: 'iPad Parts',
-    description: 'OEM quality and recycled parts',
-    imageSrc: 'https://images.unsplash.com/photo-1544807259-20d81cbd0766?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1601&q=80',
-    imageAlt: 'Collection of four insulated travel bottles on wooden shelf.',
+    name: 'Accessories',
     href: '#',
+    imageSrc: '/img/category/accessories.jpg',
+    imageAlt: 'Person placing task list card into walnut card holder next to felt carrying case on leather desk pad.',
+    description: 'Accessories for iPhones, MacBook\'s and Professional-grade repair tools for any job. ',
   },
 ]
 
 export default function Categories() {
   return (
-    <div className="bg-gray-100">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-2xl mx-auto py-16 sm:py-24 lg:py-32 lg:max-w-none">
-          <h2 className="text-2xl font-extrabold text-gray-900">Collections</h2>
+    <div className="bg-gray-50">
+      <div className="max-w-xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
+        <h2 className="text-2xl font-extrabold tracking-tight text-gray-900">Shop by Device</h2>
+        <p className="mt-4 text-base text-gray-500">
+          We offer replacement parts for a number of Apple devices, choose an option below to view our range.
+        </p>
 
-          <div className="mt-6 space-y-12 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-x-6">
-            {callouts.map((callout) => (
-              <div key={callout.name} className="group relative">
-                <div className="relative w-full h-80 bg-white rounded-lg overflow-hidden group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
-                  <img
-                    src={callout.imageSrc}
-                    alt={callout.imageAlt}
-                    className="w-full h-full object-center object-cover"
-                  />
-                </div>
-                <h3 className="mt-6 text-sm text-gray-500">
-                  <Link href={callout.href}>
-                    <a href={callout.href}>
-                      <span className="absolute inset-0" />
-                      {callout.name}
-                    </a>
-                  </Link>
-                </h3>
-                <p className="text-base font-semibold text-gray-900">{callout.description}</p>
+        <div className="mt-10 space-y-12 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-x-8">
+          {categories.map((category) => (
+            <Link href={category.href}>
+            <a key={category.name} className="group block">
+              <div
+                aria-hidden="true"
+                className="aspect-w-3 aspect-h-2 rounded-lg overflow-hidden group-hover:opacity-75 lg:aspect-w-5 lg:aspect-h-6"
+              >
+                <img
+                  src={category.imageSrc}
+                  alt={category.imageAlt}
+                  className="w-full h-full object-center object-cover"
+                />
               </div>
-            ))}
-          </div>
+              <h3 className="mt-4 text-base font-semibold text-gray-900">{category.name}</h3>
+              <p className="mt-2 text-sm text-gray-500">{category.description}</p>
+            </a>
+            </Link>
+          ))}
         </div>
       </div>
     </div>
