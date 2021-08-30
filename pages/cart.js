@@ -78,7 +78,7 @@ export default function Cart() {
                                     return (
                                         <li key={id} className="flex py-6 sm:py-10">
                                             <div className="flex-shrink-0">
-                                                <img src={ image1 } alt={ alt } className="w-24 h-24 rounded-md object-center object-cover sm:w-48 sm:h-48" />
+                                                <img src={image1} alt={alt} className="w-24 h-24 rounded-md object-center object-cover sm:w-48 sm:h-48" />
                                             </div>
                                             <div className="ml-4 flex-1 flex flex-col justify-between sm:ml-6">
                                                 <div className="relative pr-9 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:pr-0">
@@ -86,23 +86,23 @@ export default function Cart() {
                                                         <div className="flex justify-between">
                                                             <h3 className="text-sm">
                                                                 <a href="#" className="font-medium text-gray-700 hover:text-gray-800">
-                                                                    { title} 
+                                                                    {title}
                                                                 </a>
                                                             </h3>
                                                         </div>
                                                         <div className="mt-1 flex text-sm">
                                                             <p className="text-gray-500">
-                                                                { partnumber }
+                                                                {partnumber}
                                                             </p>
                                                             <p className="ml-4 pl-4 border-l border-gray-200 text-gray-500">
-                                                                { type }
+                                                                {type}
                                                             </p>
                                                         </div>
                                                         <p className="mt-1 text-sm font-medium text-gray-900">£{price}</p>
                                                     </div>
                                                     <div className="mt-4 sm:mt-0 sm:pr-9">
                                                         <label htmlFor="quantity-0" className="sr-only">Quantity</label>
-                                                        { quantity }
+                                                        {quantity}
                                                         <div className="absolute top-0 right-0">
                                                             <button type="button"
                                                                 onClick={() => removeItem({ id })}
@@ -174,34 +174,34 @@ export default function Cart() {
                     <section aria-labelledby="related-heading" className="mt-24">
                         <h2 id="related-heading" className="text-lg font-medium text-gray-900">You may also like…</h2>
                         <ul>
-                        <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
-                            {promoproducts.map(product => {
-                                const { id, title, image1, alt, price } = product;
-                                return (
-                                    <li key={id}>
-                                    <Link href={`/iphone-parts/${id}`}>
-                                        <div className="group relative">
-                                            <div className="w-full min-h-80 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-80 lg:aspect-none">
-                                                <img src={image1} alt={alt} className="w-full h-full object-center object-cover lg:w-full lg:h-full" />
-                                            </div>
-                                            <div className="mt-4 flex justify-between">
-                                                <div>
-                                                    <h3 className="text-sm text-gray-700">
-                                                        <a href="#">
-                                                            <span aria-hidden="true" className="absolute inset-0" />
-                                                            {title}
-                                                        </a>
-                                                    </h3>
+                            <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+                                {promoproducts.map(product => {
+                                    const { id, title, image1, alt, price } = product;
+                                    return (
+                                        <li key={id}>
+                                            <Link href={`/iphone-parts/${id}`}>
+                                                <div className="group relative">
+                                                    <div className="w-full min-h-80 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-80 lg:aspect-none">
+                                                        <img src={image1} alt={alt} className="w-full h-full object-center object-cover lg:w-full lg:h-full" />
+                                                    </div>
+                                                    <div className="mt-4 flex justify-between">
+                                                        <div>
+                                                            <h3 className="text-sm text-gray-700">
+                                                                <a href="#">
+                                                                    <span aria-hidden="true" className="absolute inset-0" />
+                                                                    {title}
+                                                                </a>
+                                                            </h3>
+                                                        </div>
+                                                        <p className="text-sm font-medium text-gray-900">£{price}</p>
+                                                    </div>
                                                 </div>
-                                                <p className="text-sm font-medium text-gray-900">£{price}</p>
-                                            </div>
-                                        </div>
-                                    </Link>
-                                    </li>
-                                )
-                            })}
-                            {/* More products... */}
-                        </div>
+                                            </Link>
+                                        </li>
+                                    )
+                                })}
+                                {/* More products... */}
+                            </div>
                         </ul>
                     </section>
                 </main>

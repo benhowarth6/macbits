@@ -18,7 +18,7 @@ export function useCartState() {
 
   useEffect(() => {
     const data = getStorageItem(CART_STATE_KEY);
-    if ( data ) {
+    if (data) {
       updateCart(data);
     }
   }, []);
@@ -36,7 +36,7 @@ export function useCartState() {
   });
 
   const subtotal = cartItems.reduce((accumulator, { pricePerUnit, quantity }) => {
-    return accumulator + ( pricePerUnit * quantity );
+    return accumulator + (pricePerUnit * quantity);
   }, 0);
 
   const quantity = cartItems.reduce((accumulator, { quantity }) => {
@@ -45,9 +45,9 @@ export function useCartState() {
 
   function addToCart({ id }) {
     updateCart((prev) => {
-      let cart = {...prev};
+      let cart = { ...prev };
 
-      if ( cart.products[id] ) {
+      if (cart.products[id]) {
         cart.products[id].quantity = cart.products[id].quantity + 1;
       } else {
         cart.products[id] = {
@@ -62,9 +62,9 @@ export function useCartState() {
 
   function updateItem({ id, quantity }) {
     updateCart((prev) => {
-      let cart = {...prev};
+      let cart = { ...prev };
 
-      if ( cart.products[id] ) {
+      if (cart.products[id]) {
         cart.products[id].quantity = quantity;
       }
 
@@ -72,7 +72,7 @@ export function useCartState() {
     })
   }
 
-  function removeItem ({ id }) {
+  function removeItem({ id }) {
     updateCart(prev => {
       let cart = { ...prev }
 

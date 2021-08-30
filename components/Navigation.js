@@ -411,7 +411,7 @@ export default function Navigation() {
                                                 <Popover.Button onClick={() => (open = false)}>
                                                   <Link href={`/iphone-models/${id}`}>
                                                     <a className="hover:text-gray-800 truncate">
-                                                      { title }
+                                                      {title}
                                                     </a>
                                                   </Link>
                                                 </Popover.Button>
